@@ -1,8 +1,11 @@
 <template>
   <div class="status-footer">
     <div class="game-completed" v-if="status === IStatus.PASSED">
-      <div>Você completou todos os pares em {{ turns }} Turnos!</div>
+      <div>Você completou todos os pares em {{ turns }} Rodadas!</div>
       <a @click.prevent.stop="reset">Jogar Novamente</a>
+    </div>
+    <div v-if="status === IStatus.PLAYING">
+      Rodada: {{ turns }} 
     </div>
   </div>
 </template>
