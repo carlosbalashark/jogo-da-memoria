@@ -16,7 +16,7 @@ export function getHighestRecord(): number {
   if (savedTopScore) {
     return +savedTopScore
   }
-  return 9999
+  return 0
 }
 
 export function saveHighestRecord(score: number): void {
