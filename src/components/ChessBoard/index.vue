@@ -32,7 +32,6 @@ const onFlip = (e: ICard) => {
     lastCard.value = e
     return
   }
-  CountTurn.playerMove({ commit })
   if (lastCard.value !== e && lastCard.value.name === e.name) {
     lastCard.value = null
     commit('updateNonMatchedPairs', -1)
