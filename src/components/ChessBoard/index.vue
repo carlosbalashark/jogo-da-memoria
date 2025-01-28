@@ -32,6 +32,10 @@ const onFlip = (e: ICard) => {
     lastCard.value = e
     return
   }
+
+  dispatch('userMoves')
+
+  // Quando os cards forem iguais
   if (lastCard.value !== e && lastCard.value.name === e.name) {
     lastCard.value = null
     commit('updateNonMatchedPairs', -1)
